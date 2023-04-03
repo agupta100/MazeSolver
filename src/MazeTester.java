@@ -1,6 +1,6 @@
 /**
  * A class to test our MazeSolver
- * @author: Nandhini Namasivayam
+ * @author: Nandhini Namasivayam, Aarav Gupta
  * @version: 03/04/2022
  */
 

@@ -1,6 +1,6 @@
 /**
  * Creates a Maze made up of MazeCells
- * @author Ms. Namasivayam
+ * @author Ms. Namasivayam, Aarav Gupta
  * @version 03/04/2022
  */
 
@@ -145,8 +145,25 @@ public class Maze {
      * @param col the int col val
      * @return boolean true/false
      */
-    public boolean isValidCell(int row, int col) {
-        // TODO: Complete this function
+    public boolean isValidCell(int row, int col)
+    {
+        // check if the row or column index is out of bounds
+        if (row < 0 || row >= this.numRows || col < 0 || col >= this.numCols)
+        {
+            return false;
+        }
+        // get the MazeCell object at the given row and column indices
+        MazeCell cell = this.mazeGrid[row][col];
+        if (cell.isWall())
+        {
+            return false;
+        }
+
+        // check if the cell is explored or not
+        if (cell.isExplored())
+        {
+            return false;
+        }
         return true;
     }
 }

@@ -1,6 +1,6 @@
 /**
  * A class that represents a single cell of the maze.
- * @author Ms. Namasivayam
+ * @author Ms. Namasivayam, Aarav Gupta
  * @version 03/10/2023
  */
 
