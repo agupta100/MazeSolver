@@ -59,8 +59,7 @@ public class MazeSolver {
      */
 
     public ArrayList<MazeCell> solveMazeDFS() {
-        // Initialize an empty ArrayList and a Stack of MazeCell objects
-        ArrayList<MazeCell> arrayList = new ArrayList<MazeCell>();
+        // Initialize a Stack of MazeCell objects
         Stack<MazeCell> cellsToVisit = new Stack<MazeCell>();
 
         // Start at the beginning cell and add it to the stack
@@ -111,7 +110,7 @@ public class MazeSolver {
                 current.setExplored(true);
                 cellsToVisit.push(neighbor);
             }
-                // Add the current cell to the ArrayList
+
         }
         return getSolution();
     }
@@ -122,8 +121,8 @@ public class MazeSolver {
      */
     public ArrayList<MazeCell> solveMazeBFS()
     {
-        // Initialize an empty ArrayList and a Queue of MazeCell objects
-        ArrayList<MazeCell> arrayList = new ArrayList<>();
+        // Initialize a Queue of MazeCell objects
+
         Queue<MazeCell> cellsToVisit = new LinkedList<>();
 
         // Start at the beginning cell and add it to the queue
@@ -133,7 +132,6 @@ public class MazeSolver {
         {
             current.setExplored(true);
             current = cellsToVisit.remove();
-            arrayList.add(current);
 
             // If the current cell is the end cell, return the solution path
             if (current == maze.getEndCell())
